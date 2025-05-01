@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play School - Contact Us</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f0f8ff; /* Light baby blue */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        /* Navbar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 6%;
+            background-color: #ffcc00; /* Playful yellow */
+        }
+
+        nav img {
+            width: 100px;
+            height: 80px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            
+        }
+
+        .nav-links ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 20px;
+        }
+
+        .nav-links ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .fa-bars, .fa-times {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Contact form styling */
+        form {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e64a19;
+        }
+
+        hr {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #ffcc00;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .nav-links ul li {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .fa-bars {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <nav>
+        <a href="miniproject.html"><img src="logof.jpg" alt="Play School Logo"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Service.html">PROGRAMS</a></li>
+                <li><a href="Contact Us.html">CONTACT</a></li>
+                <li><a href="login.html">ADMISSIONS</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</section>
+
+<h1>Contact Us - Play School Inquiry</h1>
+
+<form>
+    <div>
+        <input type="text" placeholder="Parent's Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Mobile No." required>
+        <input type="text" placeholder="Child's Age" required>
+    </div>
+
+    <div>
+        <select required>
+            <option value="">Select Inquiry Type</option>
+            <option value="Admission">Admission Inquiry</option>
+            <option value="Curriculum">Curriculum Details</option>
+            <option value="Facilities">Facilities & Amenities</option>
+            <option value="Fees">Fee Structure</option>
+            <option value="Other">Other Inquiry</option>
+        </select>
+        <input type="text" placeholder="Your Message">
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <input type="submit" value="Submit Inquiry">
+    </div>
+</form>
+
+<hr>
+<h1>Our Location</h1>
+<p style="text-align: center;">Mumbai</p>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.add("active");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("active");
+    }
+</script>
+
+</body>
+</html>

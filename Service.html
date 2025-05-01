@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services - Kid'z Villa Play School</title>
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #eeeeec; /* Light pastel background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff5722; /* Playful color */
+            font-size: 28px;
+        }
+
+        .service {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .service-info {
+            flex: 1;
+        }
+
+        .service-info h2 {
+            color: #444;
+        }
+
+        .service-info p {
+            color: #666;
+        }
+        
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffcc00; /* Bright footer */
+            color: black;
+            margin-top: 20px;
+        }
+        
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                right: -200px;
+                top: 0;
+                background: #ffcc00;
+                height: 100vh;
+                width: 200px;
+                transition: 0.5s;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .nav-links ul li {
+                display: block;
+                margin: 15px 0;
+            }
+
+            .menu-icon {
+                font-size: 26px;
+                color: white;
+                cursor: pointer;
+            }
+
+            .close-icon {
+                display: none;
+                font-size: 24px;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <nav>
+            <a href="index.html"><img src="images/logo.jpeg" alt="Play School Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="Service.html">PROGRAMS</a></li>
+                    <li><a href="Contact Us.html">CONTACT</a></li>
+                    <li><a href="login.html">ADMISSIONS</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu">
+                <i class="fa fa-bars menu-icon" onclick="showMenu()"></i>
+                <i class="fa fa-times close-icon" onclick="hideMenu()"></i>
+            </div>
+        </nav>
+    </section>
+
+    <div class="container">
+        <h1>Our Play School Programs</h1>
+
+        <div class="service">
+            <img src="early_learning.png" alt="Early Learning">
+            <div class="service-info">
+                <h2>Early Learning & Social Skills</h2>
+                <p>Interactive learning designed for toddlers to develop basic motor skills, communication, and creativity.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="creative_play.png" alt="Creative Play">
+            <div class="service-info">
+                <h2>Creative Play & Exploration</h2>
+                <p>Play-based learning activities that nurture curiosity, imagination, and problem-solving skills.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="kindergarten_prep.png" alt="Kindergarten Prep">
+            <div class="service-info">
+                <h2>Kindergarten Preparation</h2>
+                <p>A structured program to develop numeracy, literacy, and cognitive abilities for a strong foundation in early education.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Kid'z Villa Play School. All Rights Reserved.
+    </div>
+
+    <script>
+        function showMenu() {
+            if (window.innerWidth <= 768) {
+                document.getElementById("navLinks").style.right = "0";
+                document.querySelector(".menu-icon").style.display = "none";
+                document.querySelector(".close-icon").style.display = "block";
+            }
+        }
+
+        function hideMenu() {
+            if (window.innerWidth <= 768) {
+                document.getElementById("navLinks").style.right = "-200px";
+                document.querySelector(".menu-icon").style.display = "block";
+                document.querySelector(".close-icon").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

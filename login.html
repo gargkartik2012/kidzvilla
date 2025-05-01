@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kid'z Villa Play School - Admissions</title>
+    <link rel="stylesheet" href="style1.css">
+    
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #e5e6e2; /* Light pastel background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff5722; /* Playful color */
+            font-size: 28px;
+        }
+
+        .admission-form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .admission-form input,
+        .admission-form select,
+        .admission-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .admission-form input[type="submit"] {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .admission-form input[type="submit"]:hover {
+            background-color: #e64a19;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffcc00; /* Bright footer */
+            color: black;
+            margin-top: 20px;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <nav>
+            <a href="index.html"><img src="logof.jpg" alt="Play School Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT US</a></li>
+                    <li><a href="Service.html">PROGRAMS</a></li>
+                    <li><a href="Contact Us.html">CONTACT</a></li>
+                    <li><a href="login.html">ADMISSIONS</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu">
+                <i class="fa fa-bars menu-icon" onclick="showMenu()"></i>
+                <i class="fa fa-times close-icon" onclick="hideMenu()"></i>
+            </div>
+        </nav>
+    </section>
+
+    <div class="container">
+        <h1>Play School Admissions</h1>
+        <p style="text-align: center;">Join Kid'z Villa Play School for a fun-filled early learning experience! Fill out the form below to inquire about admission.</p>
+
+        <form class="admission-form">
+            <input type="text" placeholder="Parent's Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Mobile No." required>
+            <input type="text" placeholder="Child's Name" required>
+            <input type="text" placeholder="Child's Age" required>
+
+            <select required>
+                <option value="">Select Grade Level</option>
+                <option value="Pre-Nursery">Pre-Nursery (2-3 years)</option>
+                <option value="Nursery">Nursery (3-4 years)</option>
+                <option value="Kindergarten">Kindergarten (4-5 years)</option>
+            </select>
+
+            <textarea placeholder="Any Specific Requirements or Queries" rows="4"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Kid'z Villa Play School. All Rights Reserved.
+    </div>
+
+    <script>
+        function showMenu() {
+            if (window.innerWidth <= 768) {
+                document.getElementById("navLinks").style.right = "0";
+                document.querySelector(".menu-icon").style.display = "none";
+                document.querySelector(".close-icon").style.display = "block";
+            }
+        }
+
+        function hideMenu() {
+            if (window.innerWidth <= 768) {
+                document.getElementById("navLinks").style.right = "-200px";
+                document.querySelector(".menu-icon").style.display = "block";
+                document.querySelector(".close-icon").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
